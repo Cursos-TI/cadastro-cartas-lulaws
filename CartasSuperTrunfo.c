@@ -98,8 +98,8 @@ int main() {
 	densR = dens2>dens1;
 	ppcR=ppc1>ppc2;
 	
-	poder1=(float)popul1+area1+pib1+turismo1+ppc1+(1.0f/dens1);
-	poder2=(float)popul2+area2+pib2+turismo2+ppc2+(1.0f/dens2);
+	poder1=(float)popul1+area1+pib1+(float)turismo1+ppc1+(1.0f/dens1); // correção foi aqui
+	poder2=(float)popul2+area2+pib2+(float)turismo2+ppc2+(1.0f/dens2); // e foi apenas o casting de turismo de int para float
 	
 	poder = (poder1>poder2);
 	
